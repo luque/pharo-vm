@@ -42,28 +42,6 @@ function(download_Cairo)
       add_third_party_dependency("libpng-1.6.37")
     endif()  
   endif()
-endFunction()
-
-function(build_Cairo)
-  message(STATUS "Building Cairo")
-
-endfunction()
-
-if (BUILD_BUNDLE)
-  #Only get Freetype if required
-  if(PHARO_DEPENDENCIES_PREFER_DOWNLOAD_BINARIES)
-    #Download Freetype binaries directly
-    download_Freetype()
-  else()
-    #Look for Freetype in the system, then build or download if possible
-    find_system_Freetype()
-    if(NOT Freetype_FOUND)
-        build_Freetype()
-    endif()
-  endif()
-endif()
-
-
 
 if (BUILD_BUNDLE)
   #Only get Cairo if required
