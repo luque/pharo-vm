@@ -42,6 +42,7 @@ function(download_Cairo)
       add_third_party_dependency("libpng-1.6.37")
     endif()  
   endif()
+endFunction()
 
 if (BUILD_BUNDLE)
   #Only get Cairo if required
