@@ -59,6 +59,7 @@ if(GENERATE_SOURCES)
     #Setting platform specific vmmaker virtual machine, with cached download or override
     if (GENERATE_PHARO_VM) 
         message("Overriding VM used for code generation")  
+        message("GENERATE_PHARO_VM=${GENERATE_PHARO_VM}")
         set(VMMAKER_VM ${GENERATE_PHARO_VM})
         # add empty target because is required later when installing vmmaker
 	add_custom_target(vmmaker_vm)
